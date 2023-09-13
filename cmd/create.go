@@ -7,11 +7,11 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/semaphoreci/cli/cmd/utils"
-	"github.com/semaphoreci/cli/cmd/workflows"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/cmd/workflows"
 
-	client "github.com/semaphoreci/cli/api/client"
-	models "github.com/semaphoreci/cli/api/models"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 
 	"github.com/spf13/cobra"
 )

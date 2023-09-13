@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 	httpmock "github.com/jarcoal/httpmock"
-	models "github.com/semaphoreci/cli/api/models"
 
 	assert "github.com/stretchr/testify/assert"
 )

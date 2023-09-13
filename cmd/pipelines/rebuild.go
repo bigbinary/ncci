@@ -3,8 +3,8 @@ package pipelines
 import (
 	"fmt"
 
-	client "github.com/semaphoreci/cli/api/client"
-	"github.com/semaphoreci/cli/cmd/utils"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
 )
 
 func Rebuild(id string) {

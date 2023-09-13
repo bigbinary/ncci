@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	models "github.com/semaphoreci/cli/api/models"
-	"github.com/semaphoreci/cli/api/uuid"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
+	"github.com/bigbinary/neeto-ci-cli/api/uuid"
 )
 
 type PipelinesApiV1AlphaApi struct {

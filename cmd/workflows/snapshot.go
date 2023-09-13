@@ -6,8 +6,8 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	client "github.com/semaphoreci/cli/api/client"
-	"github.com/semaphoreci/cli/cmd/utils"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
 )
 
 func CreateSnapshot(projectName, label, archiveName string) ([]byte, error) {
