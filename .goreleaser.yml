@@ -1,4 +1,4 @@
-project_name: sem
+project_name: neeto-ci-cli
 before:
   hooks:
   - go get ./...
@@ -32,10 +32,10 @@ changelog:
 brews:
   -
     tap:
-      owner: semaphoreci
+      owner: neetoci
       name: homebrew-tap
     folder: Formula
-    homepage:  https://semaphoreci.com
-    description: Semaphore 2.0 command line interface.
+    homepage:  https://neetoci.com
+    description: neetoCI 1.0 command line interface.
     test: |
-      system "#{bin}/sem version"
+      system "#{bin}/neeto-ci-cli version"
