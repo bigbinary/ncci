@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/semaphoreci/cli/api/client"
+	"github.com/bigbinary/neeto-ci-cli/api/client"
 )
 
 func GetProjectId(name string) string {

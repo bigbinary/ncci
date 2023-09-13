@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	client "github.com/semaphoreci/cli/api/client"
-	models "github.com/semaphoreci/cli/api/models"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 
-	"github.com/semaphoreci/cli/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
 )
 
 func StartDebugJobSession(debug *models.DebugJobV1Alpha, message string) error {

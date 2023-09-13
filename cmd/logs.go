@@ -6,9 +6,9 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	client "github.com/semaphoreci/cli/api/client"
-	"github.com/semaphoreci/cli/cmd/utils"
-	"github.com/semaphoreci/cli/config"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/config"
 	"github.com/spf13/cobra"
 )
 

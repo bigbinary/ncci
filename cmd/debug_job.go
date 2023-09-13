@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	models "github.com/semaphoreci/cli/api/models"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 
-	"github.com/semaphoreci/cli/cmd/ssh"
-	"github.com/semaphoreci/cli/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/cmd/ssh"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
 	"github.com/spf13/cobra"
 )
 

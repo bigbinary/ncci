@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	models "github.com/semaphoreci/cli/api/models"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 )
 
 type DashboardApiV1AlphaApi struct {

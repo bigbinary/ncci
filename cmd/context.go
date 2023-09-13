@@ -3,8 +3,8 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/semaphoreci/cli/cmd/utils"
-	"github.com/semaphoreci/cli/config"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/config"
 	"github.com/spf13/cobra"
 )
 

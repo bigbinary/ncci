@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"net/url"
 
-	models "github.com/semaphoreci/cli/api/models"
-	"github.com/semaphoreci/cli/api/uuid"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
+	"github.com/bigbinary/neeto-ci-cli/api/uuid"
 )
 
 type DeploymentTargetsApiV1AlphaApi struct {

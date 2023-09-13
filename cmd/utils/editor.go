@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/semaphoreci/cli/config"
+	"github.com/bigbinary/neeto-ci-cli/config"
 )
 
 const editedContentTemplate = `# Editing %s.

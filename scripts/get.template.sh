@@ -15,7 +15,7 @@ cleanup() {
   rm -rf "${TMP_DIR}"
 }
 
-curl --fail -L "https://github.com/semaphoreci/cli/releases/download/${VERSION}/sem_${OS}_${ARCH}.tar.gz" -o ${TMP_DIR}/sem.tar.gz
+curl --fail -L "https://github.com/bigbinary/neeto-ci-cli/releases/download/${VERSION}/sem_${OS}_${ARCH}.tar.gz" -o ${TMP_DIR}/sem.tar.gz
 
 
 if ! [ $? -eq 0 ]; then

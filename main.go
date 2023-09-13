@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"runtime"
 
-	client "github.com/semaphoreci/cli/api/client"
-	"github.com/semaphoreci/cli/cmd"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	"github.com/bigbinary/neeto-ci-cli/cmd"
 )
 
 // injected as ldflags during building

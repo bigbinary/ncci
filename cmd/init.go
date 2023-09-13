@@ -7,13 +7,13 @@ import (
 	"os"
 	"regexp"
 
-	"github.com/semaphoreci/cli/cmd/utils"
-	"github.com/semaphoreci/cli/config"
-	"github.com/semaphoreci/cli/generators"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/config"
+	"github.com/bigbinary/neeto-ci-cli/generators"
 	"github.com/spf13/cobra"
 
-	client "github.com/semaphoreci/cli/api/client"
-	models "github.com/semaphoreci/cli/api/models"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 	gitconfig "github.com/tcnksm/go-gitconfig"
 )
 

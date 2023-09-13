@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/semaphoreci/cli/cmd/pipelines"
-	"github.com/semaphoreci/cli/cmd/workflows"
+	"github.com/bigbinary/neeto-ci-cli/cmd/pipelines"
+	"github.com/bigbinary/neeto-ci-cli/cmd/workflows"
 	"github.com/spf13/cobra"
 )
 

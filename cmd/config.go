@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/semaphoreci/cli/config"
+	"github.com/bigbinary/neeto-ci-cli/config"
 	"github.com/spf13/cobra"
 )
 
