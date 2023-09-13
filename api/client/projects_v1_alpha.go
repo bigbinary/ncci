@@ -15,7 +15,7 @@ type ProjectApiV1AlphaApi struct {
 
 func NewProjectV1AlphaApi() ProjectApiV1AlphaApi {
 	baseClient := NewBaseClientFromConfig()
-	baseClient.SetApiVersion("v1alpha")
+	baseClient.SetApiVersion("cli/v1")
 
 	return ProjectApiV1AlphaApi{
 		BaseClient:           baseClient,
@@ -25,7 +25,7 @@ func NewProjectV1AlphaApi() ProjectApiV1AlphaApi {
 }
 
 func NewProjectV1AlphaApiWithCustomClient(client BaseClient) ProjectApiV1AlphaApi {
-	client.SetApiVersion("v1alpha")
+	client.SetApiVersion("cli/v1")
 
 	return ProjectApiV1AlphaApi{
 		BaseClient:           client,

@@ -14,13 +14,14 @@ import (
 var connectCmd = &cobra.Command{
 	Use:   "connect",
 	Short: "Connect to a Semaphore endpoint",
-	Args:  cobra.ExactArgs(2),
+	Args:  cobra.ExactArgs(3),
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		host := args[0]
-		token := args[1]
+		email := args[1]
+		token := args[2]
 
-		baseClient := client.NewBaseClient(token, host, "")
+		baseClient := client.NewBaseClient(email, token, host, "")
 		client := client.NewProjectV1AlphaApiWithCustomClient(baseClient)
 
 		_, err := client.ListProjects()
@@ -33,6 +34,7 @@ var connectCmd = &cobra.Command{
 		name := strings.Replace(host, ".", "_", -1)
 
 		config.SetActiveContext(name)
+		config.SetEmail(email)
 		config.SetAuth(token)
 		config.SetHost(host)
 

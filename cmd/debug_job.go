@@ -41,13 +41,13 @@ func RunDebugJobCmd(cmd *cobra.Command, args []string) {
 	fmt.Printf("* Setting duration to %d minutes\n", int(duration.Minutes()))
 
 	sshIntroMessage := `
-Semaphore CI Debug Session.
+neetoCI Debug Session.
 
   - Checkout your code with ` + "`checkout`" + `
   - Run your CI commands with ` + "`source ~/commands.sh`" + `
   - Leave the session with ` + "`exit`" + `
 
-Documentation: https://docs.semaphoreci.com/essentials/debugging-with-ssh-access/.
+Documentation: https://docs.neetoci.com/essentials/debugging-with-ssh-access/.
 `
 
 	err = ssh.StartDebugJobSession(debug, sshIntroMessage)

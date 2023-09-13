@@ -38,6 +38,17 @@ func GetActiveContext() string {
 	}
 }
 
+func GetEmail() string {
+	if flag.Lookup("test.v") == nil {
+		context := GetActiveContext()
+		key_path := fmt.Sprintf("contexts.%s.auth.email", context)
+
+		return Get(key_path)
+	} else {
+		return "oliver@example.com"
+	}
+}
+
 func GetAuth() string {
 	if flag.Lookup("test.v") == nil {
 		context := GetActiveContext()
@@ -67,6 +78,13 @@ func GetEditor() string {
 	} else {
 		return "true" // Bash 'true' command, do nothing in tests
 	}
+}
+
+func SetEmail(email string) {
+	context := GetActiveContext()
+	key_path := fmt.Sprintf("contexts.%s.auth.email", context)
+
+	Set(key_path, email)
 }
 
 func SetAuth(token string) {

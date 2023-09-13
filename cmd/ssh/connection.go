@@ -20,7 +20,7 @@ type Connection struct {
 }
 
 func NewConnection(ip string, port int32, username string, sshKey string) (*Connection, error) {
-	sshKeyFile, err := ioutil.TempFile("", "sem-cli-debug-private-key")
+	sshKeyFile, err := ioutil.TempFile("", "neeto-ci-cli-debug-private-key")
 	if err != nil {
 		return nil, err
 	}
@@ -57,7 +57,7 @@ func NewConnectionForJob(job *models.JobV1Alpha, sshKeyPath string) (*Connection
 		return nil, err
 	}
 
-	return NewConnection(ip, port, "semaphore", sshKeyPath)
+	return NewConnection(ip, port, "neetoci", sshKeyPath)
 }
 
 func (c *Connection) Close() {
@@ -86,7 +86,7 @@ func (c *Connection) WaitUntilReady(attempts int, callback func()) error {
 }
 
 func (c *Connection) IsReady() (bool, error) {
-	cmd, err := c.sshCommand("bash /tmp/ssh_jump_point cat /tmp/sempahore-user-commands-have-started", false)
+	cmd, err := c.sshCommand("bash /tmp/ssh_jump_point cat /tmp/neetoci-user-commands-have-started", false)
 	log.Printf("SSH connection: Running %+v", cmd)
 
 	if err != nil {
