@@ -1,4 +1,4 @@
-project_name: neeto-ci-cli
+project_name: sem
 before:
   hooks:
   - go get ./...
@@ -32,10 +32,10 @@ changelog:
 brews:
   -
     tap:
-      owner: neetoci
+      owner: bigbinary
       name: homebrew-tap
     folder: Formula
     homepage:  https://neetoci.com
     description: neetoCI 1.0 command line interface.
     test: |
-      system "#{bin}/neeto-ci-cli version"
+      system "#{bin}/sem version"
