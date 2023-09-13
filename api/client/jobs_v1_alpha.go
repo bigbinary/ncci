@@ -16,7 +16,7 @@ type JobsApiV1AlphaApi struct {
 
 func NewJobsV1AlphaApi() JobsApiV1AlphaApi {
 	baseClient := NewBaseClientFromConfig()
-	baseClient.SetApiVersion("v1alpha")
+	baseClient.SetApiVersion("cli/v1")
 
 	return JobsApiV1AlphaApi{
 		BaseClient:           baseClient,
