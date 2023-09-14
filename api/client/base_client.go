@@ -12,7 +12,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/bigbinary/ncci/config"
+	"github.com/bigbinary/neeto-ci-cli/config"
 )
 
 var UserAgent = "" // injected via main on every release

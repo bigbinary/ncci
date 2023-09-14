@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"runtime"
 
-	client "github.com/bigbinary/ncci/api/client"
-	"github.com/bigbinary/ncci/cmd"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	"github.com/bigbinary/neeto-ci-cli/cmd"
 )
 
 // injected as ldflags during building

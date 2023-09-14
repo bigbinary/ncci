@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/url"
 
-	models "github.com/bigbinary/ncci/api/models"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 )
 
 type AgentApiV1AlphaApi struct {

@@ -7,13 +7,13 @@ import (
 	"os"
 	"regexp"
 
-	"github.com/bigbinary/ncci/cmd/utils"
-	"github.com/bigbinary/ncci/config"
-	"github.com/bigbinary/ncci/generators"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/config"
+	"github.com/bigbinary/neeto-ci-cli/generators"
 	"github.com/spf13/cobra"
 
-	client "github.com/bigbinary/ncci/api/client"
-	models "github.com/bigbinary/ncci/api/models"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 	gitconfig "github.com/tcnksm/go-gitconfig"
 )
 

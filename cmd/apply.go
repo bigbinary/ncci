@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	client "github.com/bigbinary/ncci/api/client"
-	models "github.com/bigbinary/ncci/api/models"
-	"github.com/bigbinary/ncci/cmd/utils"
+	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
 	"github.com/spf13/cobra"
 )
 

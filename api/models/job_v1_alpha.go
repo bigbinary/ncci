@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/bigbinary/ncci/cmd/jobs"
+	"github.com/bigbinary/neeto-ci-cli/cmd/jobs"
 	yaml "gopkg.in/yaml.v2"
 )
 

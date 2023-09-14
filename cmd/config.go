@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/bigbinary/ncci/config"
+	"github.com/bigbinary/neeto-ci-cli/config"
 	"github.com/spf13/cobra"
 )
 

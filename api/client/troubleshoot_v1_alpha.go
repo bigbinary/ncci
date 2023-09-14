@@ -3,7 +3,7 @@ package client
 import (
 	"fmt"
 
-	models "github.com/bigbinary/ncci/api/models"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
 )
 
 type TroubleshootApiV1AlphaApi struct {
