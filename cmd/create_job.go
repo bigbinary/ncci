@@ -17,14 +17,14 @@ const jobCreateCommandNotSpecifiedMsg = `Command not specified
 
 Job can't be created without a command. Example:
 
-$ sem create job hello-world --project hello-world --command 'echo "Hello World"'
+$ ncci create job hello-world --project hello-world --command 'echo "Hello World"'
 `
 
 const jobCreateProjectNotSpecifiedMsg = `Project not specified
 
 Example:
 
-  $ sem create job hello-world --project hello-world --command 'echo "Hello World"'
+  $ ncci create job hello-world --project hello-world --command 'echo "Hello World"'
 `
 
 func NewCreateJobCmd() *CreateJobCmd {

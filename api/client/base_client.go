@@ -31,10 +31,10 @@ func NewBaseClientFromConfig() BaseClient {
 	apiVersion := "cli/v1"
 
 	if authToken == "" || host == "" {
-		fmt.Println("Connection to Semaphore is not established.")
-		fmt.Println("Run the following command to connect to Semaphore:")
+		fmt.Println("Connection to neetoCI is not established.")
+		fmt.Println("Run the following command to connect to neetoCI:")
 		fmt.Println("")
-		fmt.Println("  sem connect [HOST] [TOKEN]")
+		fmt.Println("  ncci connect [HOST] [TOKEN]")
 		fmt.Println("")
 
 		os.Exit(1)

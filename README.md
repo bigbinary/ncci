@@ -1,4 +1,4 @@
-# neetoCI
+# ncci
 
 neetoCI 1.0 command line interface.
 
@@ -7,19 +7,19 @@ neetoCI 1.0 command line interface.
 Edge (latest build on master branch):
 
 ``` bash
-curl https://storage.googleapis.com/neeto-ci-cli-releases/get-edge.sh | bash
+curl https://storage.googleapis.com/ncci-releases/get-edge.sh | bash
 ```
 
 Stable (latest stable version, manually released):
 
 ``` bash
-curl https://storage.googleapis.com/neeto-ci-cli-releases/get.sh | bash
+curl https://storage.googleapis.com/ncci-releases/get.sh | bash
 ```
 
 Homebrew (latest stable version)
 
 ```bash
-brew install neeto-ci-cli
+brew install bigbinary/tap/ncci
 ```
 
 ## Development
