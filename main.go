@@ -21,7 +21,7 @@ func main() {
 	cmd.ReleaseCommit = commit
 	cmd.ReleaseDate = date
 
-	// Inject Semaphore User-Agent to identify the CLI in HTTP calls
+	// Inject neetoCI User-Agent to identify the CLI in HTTP calls
 	client.UserAgent = fmt.Sprintf("neetoCLI/%s (%s; %s; %s; %s; %s)", version, version, commit, date, runtime.GOOS, runtime.GOARCH)
 
 	cmd.Execute()

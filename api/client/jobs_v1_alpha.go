@@ -35,7 +35,7 @@ func (c *JobsApiV1AlphaApi) ListJobs(states []string) (*models.JobListV1Alpha, e
 	body, status, err := c.BaseClient.ListWithParams(c.ResourceNamePlural, query)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -49,7 +49,7 @@ func (c *JobsApiV1AlphaApi) GetJob(name string) (*models.JobV1Alpha, error) {
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, name)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -64,7 +64,7 @@ func (c *JobsApiV1AlphaApi) GetJobDebugSSHKey(id string) (*models.JobDebugSSHKey
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, path)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -84,7 +84,7 @@ func (c *JobsApiV1AlphaApi) CreateJob(j *models.JobV1Alpha) (*models.JobV1Alpha,
 	body, status, err := c.BaseClient.Post(c.ResourceNamePlural, json_body)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("creating %s on Semaphore failed '%s'", c.ResourceNameSingular, err))
+		return nil, errors.New(fmt.Sprintf("creating %s on neetoCI failed '%s'", c.ResourceNameSingular, err))
 	}
 
 	if status != 200 {
@@ -105,7 +105,7 @@ func (c *JobsApiV1AlphaApi) CreateDebugJob(j *models.DebugJobV1Alpha) (*models.J
 	body, status, err := c.BaseClient.Post(path, json_body)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("creating debug %s on Semaphore failed '%s'", c.ResourceNameSingular, err))
+		return nil, errors.New(fmt.Sprintf("creating debug %s on neetoCI failed '%s'", c.ResourceNameSingular, err))
 	}
 
 	if status != 200 {
@@ -126,7 +126,7 @@ func (c *JobsApiV1AlphaApi) CreateDebugProject(j *models.DebugProjectV1Alpha) (*
 	body, status, err := c.BaseClient.Post(path, json_body)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("creating debug %s on Semaphore failed '%s'", c.ResourceNameSingular, err))
+		return nil, errors.New(fmt.Sprintf("creating debug %s on neetoCI failed '%s'", c.ResourceNameSingular, err))
 	}
 
 	if status != 200 {
@@ -141,7 +141,7 @@ func (c *JobsApiV1AlphaApi) StopJob(id string) error {
 	body, status, err := c.BaseClient.Post(path, []byte{})
 
 	if err != nil {
-		return errors.New(fmt.Sprintf("stopping %s on Semaphore failed '%s'", c.ResourceNameSingular, err))
+		return errors.New(fmt.Sprintf("stopping %s on neetoCI failed '%s'", c.ResourceNameSingular, err))
 	}
 
 	if status != 200 {

@@ -30,7 +30,7 @@ func (c *WorkflowApiV1AlphaApi) ListWorkflows(project_id string) (*models.Workfl
 	body, status, err := c.BaseClient.List(urlEncode)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -59,7 +59,7 @@ func (c *WorkflowApiV1AlphaApi) CreateSnapshotWf(project_id, label, archivePath 
 
 	switch {
 	case err != nil:
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	case status != 200:
 		return nil, fmt.Errorf("http status %d with message \"%s\" received from upstream", status, body)
 	}
@@ -78,7 +78,7 @@ func (c *WorkflowApiV1AlphaApi) StopWf(id string) ([]byte, error) {
 	body, status, err := c.BaseClient.PostAction(c.ResourceNamePlural, id, actionArgs, []byte(""))
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -99,7 +99,7 @@ func (c *WorkflowApiV1AlphaApi) Rebuild(id string) ([]byte, error) {
 	body, status, err := c.BaseClient.PostAction(c.ResourceNamePlural, id, actionArgs, []byte(""))
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {

@@ -30,7 +30,7 @@ func (c *PipelinesApiV1AlphaApi) DescribePpl(id string) (*models.PipelineV1Alpha
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, detailed)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -46,7 +46,7 @@ func (c *PipelinesApiV1AlphaApi) StopPpl(id string) ([]byte, error) {
 	body, status, err := c.BaseClient.Patch(c.ResourceNamePlural, id, request_body)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -67,7 +67,7 @@ func (c *PipelinesApiV1AlphaApi) PartialRebuildPpl(id string) ([]byte, error) {
 	body, status, err := c.BaseClient.PostAction(c.ResourceNamePlural, id, actionArgs, []byte(""))
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -82,7 +82,7 @@ func (c *PipelinesApiV1AlphaApi) ListPplByWfID(projectID, wfID string) ([]byte, 
 	body, status, err := c.BaseClient.List(detailed)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -97,7 +97,7 @@ func (c *PipelinesApiV1AlphaApi) ListPpl(projectID string) ([]byte, error) {
 	body, status, err := c.BaseClient.List(detailed)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {

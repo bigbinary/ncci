@@ -50,7 +50,7 @@ func (c *DeploymentTargetsApiV1AlphaApi) describe(targetId string, withSecrets b
 	}
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, resource)
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != http.StatusOK {
@@ -86,7 +86,7 @@ func (c *DeploymentTargetsApiV1AlphaApi) History(targetId string, historyRequest
 
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, query)
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != http.StatusOK {
@@ -100,7 +100,7 @@ func (c *DeploymentTargetsApiV1AlphaApi) List(projectId string) (*models.Deploym
 	kind := fmt.Sprintf("%s?project_id=%s", c.ResourceNamePlural, projectId)
 	body, status, err := c.BaseClient.List(kind)
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != http.StatusOK {
@@ -116,7 +116,7 @@ func (c *DeploymentTargetsApiV1AlphaApi) list(projectId string, targetNames ...s
 	}
 	body, status, err := c.BaseClient.List(kind)
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != http.StatusOK {
@@ -164,7 +164,7 @@ func (c *DeploymentTargetsApiV1AlphaApi) Create(createRequest *models.Deployment
 
 	body, status, err := c.BaseClient.Post(c.ResourceNamePlural, json_body)
 	if err != nil {
-		return nil, fmt.Errorf("creating %s on Semaphore failed '%s'", c.ResourceNamePlural, err)
+		return nil, fmt.Errorf("creating %s on neetoCI failed '%s'", c.ResourceNamePlural, err)
 	}
 
 	if status != http.StatusOK {
@@ -197,7 +197,7 @@ func (c *DeploymentTargetsApiV1AlphaApi) Update(updateRequest *models.Deployment
 
 	body, status, err := c.BaseClient.Patch(c.ResourceNamePlural, updateRequest.Id, json_body)
 	if err != nil {
-		return nil, fmt.Errorf("creating %s on Semaphore failed '%s'", c.ResourceNamePlural, err)
+		return nil, fmt.Errorf("creating %s on neetoCI failed '%s'", c.ResourceNamePlural, err)
 	}
 
 	if status != http.StatusOK {
@@ -220,7 +220,7 @@ func (c *DeploymentTargetsApiV1AlphaApi) cordon(targetId, opName string) (bool, 
 
 	body, status, err := c.BaseClient.Patch(c.ResourceNamePlural, query, nil)
 	if err != nil {
-		return false, fmt.Errorf("creating %s on Semaphore failed '%s'", c.ResourceNamePlural, err)
+		return false, fmt.Errorf("creating %s on neetoCI failed '%s'", c.ResourceNamePlural, err)
 	}
 	if status != http.StatusOK {
 		return false, fmt.Errorf("http status %d with message \"%s\" received from upstream", status, body)
