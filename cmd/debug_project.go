@@ -5,11 +5,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/bigbinary/ncci/api/models"
+	"github.com/bigbinary/neeto-ci-cli/api/models"
 
-	"github.com/bigbinary/ncci/cmd/jobs"
-	"github.com/bigbinary/ncci/cmd/ssh"
-	"github.com/bigbinary/ncci/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/cmd/jobs"
+	"github.com/bigbinary/neeto-ci-cli/cmd/ssh"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
 	"github.com/spf13/cobra"
 )
 

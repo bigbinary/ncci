@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/bigbinary/ncci/cmd/utils"
+	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"

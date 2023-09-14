@@ -15,7 +15,7 @@ cleanup() {
   rm -rf "${TMP_DIR}"
 }
 
-curl --fail -L "https://github.com/bigbinary/ncci/releases/download/${VERSION}/ncci_${OS}_${ARCH}.tar.gz" -o ${TMP_DIR}/ncci.tar.gz
+curl --fail -L "https://github.com/bigbinary/neeto-ci-cli/releases/download/${VERSION}/ncci_${OS}_${ARCH}.tar.gz" -o ${TMP_DIR}/ncci.tar.gz
 
 
 if ! [ $? -eq 0 ]; then

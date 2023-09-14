@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	models "github.com/bigbinary/ncci/api/models"
-	"github.com/bigbinary/ncci/api/uuid"
+	models "github.com/bigbinary/neeto-ci-cli/api/models"
+	"github.com/bigbinary/neeto-ci-cli/api/uuid"
 	httpmock "github.com/jarcoal/httpmock"
 	assert "github.com/stretchr/testify/assert"
 )
@@ -144,7 +144,7 @@ metadata:
 spec:
   visibility: public
   repository:
-    url: "git@github.com:/bigbinary/ncci.git"
+    url: "git@github.com:/bigbinary/neeto-ci-cli.git"
     integration_type: github_token
 `
 
@@ -166,7 +166,7 @@ spec:
 	RootCmd.SetArgs([]string{"apply", "-f", yaml_file_path})
 	RootCmd.Execute()
 
-	expected := `{"apiVersion":"v1alpha","kind":"Project","metadata":{"name":"Test","id":"a13949b7-b2f6-4286-8f26-3962d7e97828"},"spec":{"visibility":"public","repository":{"url":"git@github.com:/bigbinary/ncci.git","forked_pull_requests":{},"pipeline_file":"","whitelist":{},"integration_type":"github_token"}}}`
+	expected := `{"apiVersion":"v1alpha","kind":"Project","metadata":{"name":"Test","id":"a13949b7-b2f6-4286-8f26-3962d7e97828"},"spec":{"visibility":"public","repository":{"url":"git@github.com:/bigbinary/neeto-ci-cli.git","forked_pull_requests":{},"pipeline_file":"","whitelist":{},"integration_type":"github_token"}}}`
 
 	if received != expected {
 		t.Errorf("Expected the API to receive PATCH project with: %s, got: %s", expected, received)
