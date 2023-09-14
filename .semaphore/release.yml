@@ -11,10 +11,10 @@ blocks:
         - name: GO111MODULE
           value: "on"
       secrets:
-        - name: sem-robot-ghtoken
+        - name: ncci-robot-ghtoken
       prologue:
         commands:
-          - sem-version go 1.18
+          - neetoci-version go 1.18
           - "export GOPATH=~/go"
           - "export PATH=/home/bigbinary/go/bin:$PATH"
           - checkout

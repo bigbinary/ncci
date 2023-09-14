@@ -24,7 +24,7 @@ func EditYamlInEditor(objectName string, content string) (string, error) {
 		config.GetHost(),
 		content)
 
-	dir, err := ioutil.TempDir("", "sem-cli-session")
+	dir, err := ioutil.TempDir("", "ncci-cli-session")
 
 	if err != nil {
 		return "", fmt.Errorf("Failed to open local temp file for editing '%s'", err)

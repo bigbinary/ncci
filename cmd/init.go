@@ -133,7 +133,7 @@ func ConstructProjectName(repoUrl string) (string, error) {
 	errTemplate += "  - https://HOST/<owner>/<repo_name>.git\n"
 	errTemplate += "\n"
 	errTemplate += "To add a project with an alternative git url, use the --repo-url flag:\n"
-	errTemplate += "  - sem init --repo-url git@github.com:<owner>/<repo_name>.git\n"
+	errTemplate += "  - ncci init --repo-url git@github.com:<owner>/<repo_name>.git\n"
 
 	return "", errors.New(fmt.Sprintf(errTemplate, repoUrl))
 }

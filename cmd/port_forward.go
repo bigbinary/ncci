@@ -71,7 +71,7 @@ func sshAndPortForward(ip string, sshPort int32, username string, localPort stri
 	noStrictRule := "-oStrictHostKeyChecking=no"
 	identityOnlyrule := "-oIdentitiesOnly=yes"
 
-	sshKeyFile, _ := ioutil.TempFile("", "sem-cli-debug-private-key")
+	sshKeyFile, _ := ioutil.TempFile("", "ncci-cli-debug-private-key")
 	defer os.Remove(sshKeyFile.Name())
 	_, err = sshKeyFile.Write([]byte(sshKey))
 	utils.Check(err)

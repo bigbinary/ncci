@@ -40,7 +40,7 @@ var attachCmd = &cobra.Command{
 		 */
 		if job.IsSelfHosted() {
 			fmt.Printf("* Job '%s' is running in the self-hosted agent named '%s'.\n", id, job.AgentName())
-			fmt.Printf("* Once you access the machine where that agent is running, make sure you are logged in as the same user the Semaphore agent is using.\n")
+			fmt.Printf("* Once you access the machine where that agent is running, make sure you are logged in as the same user the neetoCI agent is using.\n")
 			fmt.Printf("* You can source the '/tmp/.env-*' file where the agent keeps all the environment variables exposed to the job.\n")
 			return
 		}

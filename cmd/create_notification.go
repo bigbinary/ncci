@@ -38,21 +38,21 @@ const errNotificationWithoutProject = `Specify at least one project that sends n
 
 Example:
 
-  sem create notification my-notif --projects "cli,webapp"
+  ncci create notification my-notif --projects "cli,webapp"
 `
 
 const errNotificationWithoutSlackChannels = `Specify at least one slack channel where to send notifications.
 
 Example:
 
-  sem create notification my-notif --slack-channels "#general,#devops"
+  ncci create notification my-notif --slack-channels "#general,#devops"
 `
 
 const errNotificationWithoutEndpoint = `Specify the slack and/or webhook endpoint where to send notificaitons.
 
 Example:
 
-  sem create notification my-notif \
+  ncci create notification my-notif \
     --slack-endpoint "https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX" \
     --webhook-endpoint "https://example.com/postrequest"
 `

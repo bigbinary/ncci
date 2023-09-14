@@ -13,7 +13,7 @@ import (
 
 var connectCmd = &cobra.Command{
 	Use:   "connect",
-	Short: "Connect to a Semaphore endpoint",
+	Short: "Connect to a neetoCI endpoint",
 	Args:  cobra.ExactArgs(3),
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {

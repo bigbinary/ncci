@@ -1,7 +1,7 @@
 .PHONY: build release
 
 REL_VERSION=$(shell git rev-parse HEAD)
-REL_BUCKET=sem-cli-releases
+REL_BUCKET=ncci-releases
 SECURITY_TOOLBOX_BRANCH ?= master
 SECURITY_TOOLBOX_TMP_DIR ?= /tmp/security-toolbox
 
@@ -41,8 +41,8 @@ test:
 	docker-compose run --rm cli gotestsum --format short-verbose --junitfile results.xml --packages="./..." -- -p 1
 
 build:
-	docker-compose run --rm cli env GOOS=$(OS) GOARCH=$(ARCH) go build -ldflags "-s -w -X cmd.VERSION=$(shell git describe --tags --abbrev=0)" -o sem
-	tar -czvf /tmp/sem.tar.gz sem
+	docker-compose run --rm cli env GOOS=$(OS) GOARCH=$(ARCH) go build -ldflags "-s -w -X cmd.VERSION=$(shell git describe --tags --abbrev=0)" -o ncci
+	tar -czvf /tmp/ncci.tar.gz ncci
 
 # Automation of CLI tagging.
 

@@ -18,8 +18,8 @@ var Verbose bool
 
 // RootCmd represents the base command when called without any subcommands
 var RootCmd = &cobra.Command{
-	Use:   "sem",
-	Short: "Semaphore 2.0 command line interface",
+	Use:   "ncci",
+	Short: "neetoCI 1.0 command line interface",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		if !Verbose {
 			log.SetOutput(ioutil.Discard)
@@ -52,17 +52,18 @@ func initConfig() {
 
 	utils.CheckWithMessage(err, "failed to find home directory")
 
-	// Search config in home directory with name ".sem" (without extension).
+	// Search config in home directory with name ".ncci" (without extension).
 	viper.AddConfigPath(home)
-	viper.SetConfigName(".sem")
+	viper.SetConfigName(".ncci")
 
 	// Touch config file and make sure that it exists
-	path := fmt.Sprintf("%s/.sem.yaml", home)
+	path := fmt.Sprintf("%s/.ncci.yaml", home)
 
 	// #nosec
 	_, _ = os.OpenFile(path, os.O_RDONLY|os.O_CREATE, 0644)
 
 	err = viper.ReadInConfig()
 
+	fmt.Printf("Hello")
 	utils.CheckWithMessage(err, "failed to load config file")
 }

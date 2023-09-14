@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile.dev
     tty: true
     command: "sleep 0"
-    container_name: 'sem-cli'
+    container_name: 'ncci'
     volumes:
       - go-pkg-cache:/go
       - .:/app
