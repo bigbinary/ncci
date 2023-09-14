@@ -1,4 +1,4 @@
-module github.com/bigbinary/neeto-ci-cli
+module github.com/bigbinary/ncci
 
 go 1.18
 

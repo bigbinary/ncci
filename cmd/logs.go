@@ -6,9 +6,9 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	client "github.com/bigbinary/neeto-ci-cli/api/client"
-	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
-	"github.com/bigbinary/neeto-ci-cli/config"
+	client "github.com/bigbinary/ncci/api/client"
+	"github.com/bigbinary/ncci/cmd/utils"
+	"github.com/bigbinary/ncci/config"
 	"github.com/spf13/cobra"
 )
 

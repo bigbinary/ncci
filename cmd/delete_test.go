@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/bigbinary/neeto-ci-cli/api/uuid"
+	"github.com/bigbinary/ncci/api/uuid"
 	httpmock "github.com/jarcoal/httpmock"
 	assert "github.com/stretchr/testify/assert"
 )

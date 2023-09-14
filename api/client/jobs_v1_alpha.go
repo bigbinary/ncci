@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/url"
 
-	models "github.com/bigbinary/neeto-ci-cli/api/models"
+	models "github.com/bigbinary/ncci/api/models"
 )
 
 type JobsApiV1AlphaApi struct {

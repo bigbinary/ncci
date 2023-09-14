@@ -5,9 +5,9 @@ import (
 	"os"
 	"text/tabwriter"
 
-	client "github.com/bigbinary/neeto-ci-cli/api/client"
+	client "github.com/bigbinary/ncci/api/client"
 
-	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
+	"github.com/bigbinary/ncci/cmd/utils"
 	"github.com/spf13/cobra"
 )
 
