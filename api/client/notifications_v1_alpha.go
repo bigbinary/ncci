@@ -28,7 +28,7 @@ func (c *NotificationsV1AlphaApi) ListNotifications() (*models.NotificationListV
 	body, status, err := c.BaseClient.List(c.ResourceNamePlural)
 
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != 200 {
@@ -42,7 +42,7 @@ func (c *NotificationsV1AlphaApi) GetNotification(name string) (*models.Notifica
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, name)
 
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != 200 {
@@ -76,7 +76,7 @@ func (c *NotificationsV1AlphaApi) CreateNotification(n *models.NotificationV1Alp
 	body, status, err := c.BaseClient.Post(c.ResourceNamePlural, json_body)
 
 	if err != nil {
-		return nil, fmt.Errorf("creating %s on Semaphore failed '%s'", c.ResourceNameSingular, err)
+		return nil, fmt.Errorf("creating %s on neetoCI failed '%s'", c.ResourceNameSingular, err)
 	}
 
 	if status != 200 {
@@ -104,7 +104,7 @@ func (c *NotificationsV1AlphaApi) UpdateNotification(n *models.NotificationV1Alp
 	body, status, err := c.BaseClient.Patch(c.ResourceNamePlural, identifier, json_body)
 
 	if err != nil {
-		return nil, fmt.Errorf("updating %s on Semaphore failed '%s'", c.ResourceNamePlural, err)
+		return nil, fmt.Errorf("updating %s on neetoCI failed '%s'", c.ResourceNamePlural, err)
 	}
 
 	if status != 200 {

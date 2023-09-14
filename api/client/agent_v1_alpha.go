@@ -39,7 +39,7 @@ func (c *AgentApiV1AlphaApi) ListAgents(agentType string, cursor string) (*model
 	body, status, err := c.BaseClient.ListWithParams(c.ResourceNamePlural, query)
 
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != 200 {
@@ -53,7 +53,7 @@ func (c *AgentApiV1AlphaApi) GetAgent(name string) (*models.AgentV1Alpha, error)
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, name)
 
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != 200 {

@@ -122,7 +122,7 @@ func selfHostedSessionMessage(agentName string) string {
 neetoCI Self-Hosted Debug Session.
 
   - The debug session you created is running in the self-hosted agent named '%s'.
-  - Once you access the machine where that agent is running, make sure you are logged in as the same user the Semaphore agent is using.
+  - Once you access the machine where that agent is running, make sure you are logged in as the same user the neetoCI agent is using.
   - Source the '/tmp/.env-*' file where the agent keeps all the environment variables exposed to the job.
   - Checkout your code with `+"`checkout`"+`.
 

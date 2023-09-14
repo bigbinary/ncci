@@ -28,7 +28,7 @@ func (c *AgentTypeApiV1AlphaApi) ListAgentTypes() (*models.AgentTypeListV1Alpha,
 	body, status, err := c.BaseClient.List(c.ResourceNamePlural)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -42,7 +42,7 @@ func (c *AgentTypeApiV1AlphaApi) GetAgentType(name string) (*models.AgentTypeV1A
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, name)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -76,7 +76,7 @@ func (c *AgentTypeApiV1AlphaApi) CreateAgentType(d *models.AgentTypeV1Alpha) (*m
 	body, status, err := c.BaseClient.Post(c.ResourceNamePlural, json_body)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("creating %s on Semaphore failed '%s'", c.ResourceNameSingular, err))
+		return nil, errors.New(fmt.Sprintf("creating %s on neetoCI failed '%s'", c.ResourceNameSingular, err))
 	}
 
 	if status != 200 {

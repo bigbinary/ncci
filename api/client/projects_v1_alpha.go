@@ -37,7 +37,7 @@ func NewProjectV1AlphaApiWithCustomClient(client BaseClient) ProjectApiV1AlphaAp
 func (c *ProjectApiV1AlphaApi) ListProjects() (*models.ProjectListV1Alpha, error) {
 	body, status, err := c.BaseClient.List(c.ResourceNamePlural)
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -51,7 +51,7 @@ func (c *ProjectApiV1AlphaApi) GetProject(name string) (*models.ProjectV1Alpha, 
 	body, status, err := c.BaseClient.Get(c.ResourceNamePlural, name)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("connecting to Semaphore failed '%s'", err))
+		return nil, errors.New(fmt.Sprintf("connecting to neetoCI failed '%s'", err))
 	}
 
 	if status != 200 {
@@ -85,7 +85,7 @@ func (c *ProjectApiV1AlphaApi) CreateProject(d *models.ProjectV1Alpha) (*models.
 	body, status, err := c.BaseClient.Post(c.ResourceNamePlural, json_body)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("creating %s on Semaphore failed '%s'", c.ResourceNameSingular, err))
+		return nil, errors.New(fmt.Sprintf("creating %s on neetoCI failed '%s'", c.ResourceNameSingular, err))
 	}
 
 	if status != 200 {
@@ -107,7 +107,7 @@ func (c *ProjectApiV1AlphaApi) UpdateProject(d *models.ProjectV1Alpha) (*models.
 	body, status, err := c.BaseClient.Patch(c.ResourceNamePlural, identifier, json_body)
 
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("updating %s on Semaphore failed '%s'", c.ResourceNamePlural, err))
+		return nil, errors.New(fmt.Sprintf("updating %s on neetoCI failed '%s'", c.ResourceNamePlural, err))
 	}
 
 	if status != 200 {

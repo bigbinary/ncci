@@ -28,7 +28,7 @@ func (c *TroubleshootApiV1AlphaApi) TroubleshootWorkflow(workflowID string) (*mo
 	body, status, err := c.BaseClient.Get(urlEncode, workflowID)
 
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != 200 {
@@ -43,7 +43,7 @@ func (c *TroubleshootApiV1AlphaApi) TroubleshootJob(jobID string) (*models.Troub
 	body, status, err := c.BaseClient.Get(urlEncode, jobID)
 
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != 200 {
@@ -58,7 +58,7 @@ func (c *TroubleshootApiV1AlphaApi) TroubleshootPipeline(pplID string) (*models.
 	body, status, err := c.BaseClient.Get(urlEncode, pplID)
 
 	if err != nil {
-		return nil, fmt.Errorf("connecting to Semaphore failed '%s'", err)
+		return nil, fmt.Errorf("connecting to neetoCI failed '%s'", err)
 	}
 
 	if status != 200 {
