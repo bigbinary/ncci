@@ -3,10 +3,10 @@ package cmd
 import (
 	"fmt"
 
-	client "github.com/bigbinary/neeto-ci-cli/api/client"
-	"github.com/bigbinary/neeto-ci-cli/cmd/pipelines"
-	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
-	"github.com/bigbinary/neeto-ci-cli/cmd/workflows"
+	client "github.com/bigbinary/ncci/api/client"
+	"github.com/bigbinary/ncci/cmd/pipelines"
+	"github.com/bigbinary/ncci/cmd/utils"
+	"github.com/bigbinary/ncci/cmd/workflows"
 	"github.com/spf13/cobra"
 )
 

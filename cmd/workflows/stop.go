@@ -3,8 +3,8 @@ package workflows
 import (
 	"fmt"
 
-	"github.com/bigbinary/neeto-ci-cli/api/client"
-	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
+	"github.com/bigbinary/ncci/api/client"
+	"github.com/bigbinary/ncci/cmd/utils"
 )
 
 func Stop(id string) {

@@ -6,13 +6,13 @@ import (
 	"os"
 	"text/tabwriter"
 
-	client "github.com/bigbinary/neeto-ci-cli/api/client"
-	models "github.com/bigbinary/neeto-ci-cli/api/models"
-	"github.com/bigbinary/neeto-ci-cli/api/uuid"
-	"github.com/bigbinary/neeto-ci-cli/cmd/deployment_targets"
-	"github.com/bigbinary/neeto-ci-cli/cmd/pipelines"
-	"github.com/bigbinary/neeto-ci-cli/cmd/utils"
-	"github.com/bigbinary/neeto-ci-cli/cmd/workflows"
+	client "github.com/bigbinary/ncci/api/client"
+	models "github.com/bigbinary/ncci/api/models"
+	"github.com/bigbinary/ncci/api/uuid"
+	"github.com/bigbinary/ncci/cmd/deployment_targets"
+	"github.com/bigbinary/ncci/cmd/pipelines"
+	"github.com/bigbinary/ncci/cmd/utils"
+	"github.com/bigbinary/ncci/cmd/workflows"
 	"github.com/spf13/cobra"
 )
 

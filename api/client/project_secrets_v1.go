@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	models "github.com/bigbinary/neeto-ci-cli/api/models"
+	models "github.com/bigbinary/ncci/api/models"
 )
 
 type ProjectSecretsApiV1Api struct {
