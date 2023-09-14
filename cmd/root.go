@@ -64,6 +64,5 @@ func initConfig() {
 
 	err = viper.ReadInConfig()
 
-	fmt.Printf("Hello")
 	utils.CheckWithMessage(err, "failed to load config file")
 }
