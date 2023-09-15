@@ -18,14 +18,12 @@ import (
 var UserAgent = "" // injected via main on every release
 
 type BaseClient struct {
-	email      string
 	authToken  string
 	host       string
 	apiVersion string
 }
 
 func NewBaseClientFromConfig() BaseClient {
-	email := config.GetEmail()
 	host := config.GetHost()
 	authToken := config.GetAuth()
 	apiVersion := "cli/v1"
@@ -40,11 +38,11 @@ func NewBaseClientFromConfig() BaseClient {
 		os.Exit(1)
 	}
 
-	return NewBaseClient(email, authToken, host, apiVersion)
+	return NewBaseClient(authToken, host, apiVersion)
 }
 
-func NewBaseClient(email string, authToken string, host string, apiVersion string) BaseClient {
-	return BaseClient{email, authToken, host, apiVersion}
+func NewBaseClient(authToken string, host string, apiVersion string) BaseClient {
+	return BaseClient{authToken, host, apiVersion}
 }
 
 func (c *BaseClient) SetApiVersion(apiVersion string) *BaseClient {
@@ -61,8 +59,7 @@ func (c *BaseClient) Get(kind string, resource string) ([]byte, int, error) {
 	req, err := http.NewRequest("GET", url, nil)
 
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("X-Auth-Email", fmt.Sprintf("%s", c.email))
-	req.Header.Set("X-Auth-Token", fmt.Sprintf("%s", c.authToken))
+	req.Header.Set("Authorization", fmt.Sprintf("Token %s", c.authToken))
 	req.Header.Set("User-Agent", UserAgent)
 
 	client := &http.Client{}
@@ -93,8 +90,7 @@ func (c *BaseClient) List(kind string) ([]byte, int, error) {
 		return nil, 0, err
 	}
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("X-Auth-Email", fmt.Sprintf("%s", c.email))
-	req.Header.Set("X-Auth-Token", fmt.Sprintf("%s", c.authToken))
+	req.Header.Set("Authorization", fmt.Sprintf("Token %s", c.authToken))
 	req.Header.Set("User-Agent", UserAgent)
 
 	client := &http.Client{}
@@ -124,8 +120,7 @@ func (c *BaseClient) ListWithParams(kind string, query url.Values) ([]byte, int,
 	req, err := http.NewRequest("GET", url, nil)
 
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("X-Auth-Email", fmt.Sprintf("%s", c.email))
-	req.Header.Set("X-Auth-Token", fmt.Sprintf("%s", c.authToken))
+	req.Header.Set("Authorization", fmt.Sprintf("Token %s", c.authToken))
 	req.Header.Set("User-Agent", UserAgent)
 
 	client := &http.Client{}
@@ -155,8 +150,7 @@ func (c *BaseClient) Delete(kind string, name string) ([]byte, int, error) {
 	req, err := http.NewRequest("DELETE", url, nil)
 
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("X-Auth-Email", fmt.Sprintf("%s", c.email))
-	req.Header.Set("X-Auth-Token", fmt.Sprintf("%s", c.authToken))
+	req.Header.Set("Authorization", fmt.Sprintf("Token %s", c.authToken))
 	req.Header.Set("User-Agent", UserAgent)
 
 	client := &http.Client{}
@@ -196,8 +190,7 @@ func (c *BaseClient) PostHeaders(kind string, resource []byte, headers map[strin
 	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(resource))
 
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("X-Auth-Email", fmt.Sprintf("%s", c.email))
-	req.Header.Set("X-Auth-Token", fmt.Sprintf("%s", c.authToken))
+	req.Header.Set("Authorization", fmt.Sprintf("Token %s", c.authToken))
 	req.Header.Set("User-Agent", UserAgent)
 
 	for k, v := range headers {
@@ -232,8 +225,7 @@ func (c *BaseClient) Patch(kind string, name string, resource []byte) ([]byte, i
 	}
 
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("X-Auth-Email", fmt.Sprintf("%s", c.email))
-	req.Header.Set("X-Auth-Token", fmt.Sprintf("%s", c.authToken))
+	req.Header.Set("Authorization", fmt.Sprintf("Token %s", c.authToken))
 	req.Header.Set("User-Agent", UserAgent)
 
 	client := &http.Client{}
@@ -293,8 +285,7 @@ func (c *BaseClient) PostMultipart(kind string, args map[string]string, fileArgN
 		return []byte(""), 0, err
 	}
 
-	req.Header.Set("X-Auth-Email", fmt.Sprintf("%s", c.email))
-	req.Header.Set("X-Auth-Token", fmt.Sprintf("%s", c.authToken))
+	req.Header.Set("Authorization", fmt.Sprintf("Token %s", c.authToken))
 	req.Header.Set("User-Agent", UserAgent)
 
 	client := &http.Client{}
