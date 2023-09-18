@@ -507,53 +507,5 @@ func getPrj(cmd *cobra.Command) string {
 func init() {
 	RootCmd.AddCommand(getCmd)
 
-	getNotificationCmd := NewGetNotificationCmd()
-
-	getCmd.AddCommand(GetDashboardCmd)
-	getCmd.AddCommand(getNotificationCmd)
 	getCmd.AddCommand(GetProjectCmd)
-	getCmd.AddCommand(GetAgentTypeCmd)
-
-	GetAgentsCmd.Flags().StringP("agent-type", "t", "",
-		"agent type; if specified, returns only agents for this agent type")
-	getCmd.AddCommand(GetAgentsCmd)
-
-	GetSecretCmd.Flags().StringP("project-name", "p", "",
-		"project name; if specified will get secret from project level, otherwise organization secret")
-	GetSecretCmd.Flags().StringP("project-id", "i", "",
-		"project id; if specified will get secret from project level, otherwise organization secret")
-	getCmd.AddCommand(GetSecretCmd)
-
-	GetJobCmd.Flags().BoolVar(&GetJobAllStates, "all", false, "list all jobs including finished ones")
-	getCmd.AddCommand(GetJobCmd)
-
-	GetPplCmd.Flags().BoolVarP(&GetPplFollow, "follow", "f", false,
-		"repeat get until pipeline reaches terminal state")
-	GetPplCmd.Flags().StringP("project-name", "p", "",
-		"project name; if not specified will be inferred from git origin")
-	GetPplCmd.Flags().StringP("project-id", "i", "",
-		"project id; if not specified will be inferred from git origin")
-	getCmd.AddCommand(GetPplCmd)
-
-	getCmd.AddCommand(GetWfCmd)
-	GetWfCmd.Flags().StringP("project-name", "p", "",
-		"project name; if not specified will be inferred from git origin")
-	GetWfCmd.Flags().StringP("project-id", "i", "",
-		"project id; if not specified will be inferred from git origin")
-
-	getCmd.AddCommand(GetDTCmd)
-	GetDTCmd.Flags().StringP("project-name", "p", "",
-		"project name; if not specified will be inferred from git origin")
-	GetDTCmd.Flags().StringP("project-id", "i", "",
-		"project id; if not specified will be inferred from git origin")
-	GetDTCmd.Flags().StringP("id", "t", "", "target id")
-	GetDTCmd.Flags().StringP("name", "n", "", "target name")
-	GetDTCmd.Flags().BoolP("history", "s", false, "get deployment target history")
-	GetDTCmd.Flags().Lookup("history").NoOptDefVal = "true"
-	GetDTCmd.Flags().StringP("after", "a", "", "show deployment history after the timestamp")
-	GetDTCmd.Flags().StringP("before", "b", "", "show deployment history before the timestamp")
-	GetDTCmd.Flags().StringP("git-ref-type", "g", "", "git reference type: branch, tag, pr")
-	GetDTCmd.Flags().StringP("git-ref-label", "l", "", "git reference label: branch or tag name")
-	GetDTCmd.Flags().StringArrayP("parameter", "q", []string{}, "show deployment history of deployment targets with provided bookmark parameters")
-	GetDTCmd.Flags().StringP("triggered-by", "u", "", "show deployment history triggered by specific user or promotion")
 }

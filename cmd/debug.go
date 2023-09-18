@@ -11,7 +11,6 @@ var debugCmd = &cobra.Command{
 }
 
 func init() {
-	debugCmd.AddCommand(NewDebugProjectCmd())
 	debugCmd.AddCommand(NewDebugJobCmd())
 
 	RootCmd.AddCommand(debugCmd)
